@@ -1,0 +1,19 @@
+.primary {
+    background-color: #003459!important;
+    border-color: #1867c0!important;
+}
+
+.secondary {
+    background: #007EA7 !important;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+#app-toolbar {
+    padding: 24px;
+}
+
+#footer .subscribe{
+    height: 300px;
+}

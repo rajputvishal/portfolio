@@ -1,11 +1,1 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Hello World!</title>
-    </head>
-    <body>
-        <p>
-            Hello world!
-        </p>
-    </body>
-</html>
+<div style="height:500px"></div>
