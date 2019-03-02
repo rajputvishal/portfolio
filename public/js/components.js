@@ -42,7 +42,7 @@ Vue.component("blog-tags", {
 
 Vue.component("blog-tag", {
     props: ["tag"],
-    template: `<v-chip class="blog-tag" text-color="979797">{{tag}}</v-chip>`
+    template: `<v-chip class="blog-tag">{{tag}}</v-chip>`
 });
 
 Vue.component("blog-content", {
