@@ -1,5 +1,5 @@
 .primary {
-    background-color: #003459!important;
+    background-color: #f74770!important;
     border-color: #1867c0!important;
 }
 
@@ -7,11 +7,82 @@
     background: #007EA7 !important;
 }
 
+
 html {
     font-family: 'Roboto', sans-serif;
+    font-size: 16px !important;
+}
+
+.content {
+    color: #979797
 }
 #app-toolbar {
     padding: 24px;
+    background: linear-gradient(150deg,#f74770,#f96c8d);
+    margin-bottom: 3rem;
+}
+
+@media (min-width: 760px) {
+    .Content {
+      max-width: 48rem;
+      margin: 0 auto;
+    }
+  }
+
+.Blog-post .Blog-time {
+    color: #979797;
+    text-align: center;
+    font-weight: 400;
+}
+
+.Blog-post .Blog-title {
+    color: #f74770;
+    text-align: center;
+}
+
+@media (min-width: 760px) {
+    .Blog-post .Blog-title {
+      margin: 1rem 0;
+      font-size: 2.5rem;
+    }
+  }
+
+.Blog-post .Blog-subtitle {
+    color: #6f6064;
+    font-weight: 400;
+    text-align: center;
+    font-size: 1rem;
+    margin: 2rem;
+}
+
+@media (min-width: 760px){
+    .Blog-post .Blog-subtitle {
+        font-size: 1.2rem;
+    }
+}
+
+.Blog-post .blog-tags{
+    text-align: center;
+}
+
+.Blog-post .Blog-tag {
+    list-style: none;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: .7em;
+    letter-spacing: 2px;
+    font-weight: 800;
+    background: #e8e9ec;
+    color: #979797 !important;
+    padding: .4rem .8rem .3rem;
+    margin: .5rem .2rem;
+    border-radius: 1rem;
+}
+
+.Blog-post .Blog-content, .Blog-post .Blog-preview {
+    margin: 0 auto;
+    max-width: 35rem;
+    color: #222;
 }
 
 #footer .subscribe{

@@ -1,0 +1,65 @@
+{
+    "title": "How to download youtube videos",
+    "date": "1551418718000",
+    "tags": ["javascript", "technology"],
+    "elements": [
+        {
+            "type": "img",
+            "altText": "Youtube logo",
+            "class": "logo",
+            "href": "../images/youtube-video-download.png"
+        },
+        {
+            "type": "p",
+            "text": "Downloading youtube video means you can watch them without using or needing your internet connection. Which means you can watch your favourite videos on planes or trips to places where you may not have a reliable 4g or wifi connection.",
+            "class": ""
+        },
+        {
+            "type": "p",
+            "text": "Downloading youtube videos is easy. You can do it using third party apps and website and you can also use youtube's very own 'youtube premium' (not free) to download and watch videos offline.",
+            "class": ""
+        },{
+            "type": "p",
+            "text": "Before moving ahead you should know that downloading youtube videos using third party tools is not legal. Downloading YouTube videos also opens you up to potential copyright infringement unless you have permission from the copyright holder.",
+            "class": "quote"
+        }, 
+        {
+            "type": "p",
+            "text": "Downloading without application",
+            "class": ""
+        },
+        {
+            "type": "video",
+            "html": "<iframe width='560' height='315' src='https://www.youtube.com/embed/jJG9edcuPIk' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>",
+            "class": ""
+        },
+        {
+            "type": "ol",
+            "class": "",
+            "list": [{
+                "type": "p",
+                "text": "In this method you do not need to download any application. All you will need is to rename the video URL.",
+                "class": ""       
+            },
+            {
+                "type": "p",
+                "text": "Open youtube and open the video that you want to download and goto your browsers address bar and add 'ss' infront of youtube.com. for example if your video URL is 'wwww.youtube.com/watch?v=blahblahblah' add 'ss' and make it 'wwww.ssyoutube.com/watch?v=blahblahblah'",
+                "class": ""       
+            },
+            {
+                "type": "p",
+                "text": "That's it! after doing this you will land on 'savefrom.net' with download button ready to be clicked by you.",
+                "class": ""       
+            },
+            {
+                "type": "p",
+                "text": "It will also give you options to download video in different resolution and also dowload only audio as well.",
+                "class": ""       
+            }]        
+        }, {
+            "type": "p",
+            "text": "That was all and now you know how to a youtube video. Please let me know if you found any trouble or if you want me to write about a topic that you find more intresting in the comment section.",
+            "class": ""
+        }
+    ]
+}

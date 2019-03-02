@@ -1,1 +1,1 @@
-<div style="height:500px"></div>
+<blog-post-list :posts="posts"></blog-post-list>

@@ -15,4 +15,37 @@ template: `<v-footer dark height="auto">
                 </v-card-text>
             </v-card>
             </v-footer>`
-})
+});
+
+Vue.component("blog-post-list", {
+    props: ['posts'],
+    template: `<section><blog-post v-for="post in posts" :post="post" :preview=true></blog-post></section>`
+});
+
+Vue.component("blog-post", {
+    props: ["post", "preview"],
+    template: `<div class="blog-post" :class="{preview : preview } ">
+                    <h1  class="blog-time">{{post.time}}</h1>
+                    <h1  class="blog-title">{{post.title}}</h1>
+                    <h2  class="blog-subtitle">{{post.subtitle}}</h2>
+                    <blog-tags :tags="post.tags"></blog-tags>
+                    <blog-content :content="post.content"></blog-content>
+                </div>`
+});
+
+Vue.component("blog-tags", {
+    props: ["tags"],
+    template: `<ul class="blog-tags">
+                    <blog-tag v-for="tag in tags" :tag="tag"></blog-tag>
+                </ul>`
+});
+
+Vue.component("blog-tag", {
+    props: ["tag"],
+    template: `<v-chip class="blog-tag" text-color="979797">{{tag}}</v-chip>`
+});
+
+Vue.component("blog-content", {
+    props: ["content"],
+    template: `<div class="blog-content" color="primary" text-color="white">{{content}}</div>`
+});

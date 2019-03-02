@@ -29,7 +29,9 @@
     <body>
         <div id="app">
             <?php if($header) { echo $header;}?>
-            <?php if($page){ echo $page;}?>        
+            <div class="content">
+                <?php if($page){ echo $page;}?>   
+            </div>      
             <?php if($footer) { echo $footer;}?>
         </div>
         <script src="https://unpkg.com/@babel/polyfill@latest/dist/polyfill.min.js"></script>
@@ -42,18 +44,12 @@
             window.app = new Vue({
                 el: '#app',
                 data: {
-                    contacts: [{
-                        class: "fa-github",
-                        href: "https://github.com/rajputvishal"
-                    },{
-                        class: "fa-stack-overflow",
-                        href: "https://stackoverflow.com/users/1720452/vishal"
-                    },{
-                        class: "fa-linkedin",
-                        href: "https://linkedin.com/in/rajputvishal/"
-                    },{
-                        class: "fa-twitter",
-                        href: "https://twitter.com/vi5halR"
+                    posts: [{
+                        time: "fa-github",
+                        title: "https://github.com/rajputvishal",
+                        subtitle: "this is were it all begins",
+                        tags: ["techno", "javascript"],
+                        content:"hello hello hello hello hello"
                     }]
                 },
                 computed: {
