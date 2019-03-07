@@ -521,3 +521,9 @@ $config['rewrite_short_tags'] = FALSE;
 | Array:		array('10.0.1.200', '192.168.5.0/24')
 */
 $config['proxy_ips'] = '';
+
+
+/* My custom configuration*/
+//load default CSS and JS files to avoid adding them seperately
+$config['header_js'] = array ( 'vue.js' ,'axios.min.js', 'vuetify.min.js ', 'components.js' );
+$config['header_css'] = array ( 'vuetify.min.css ', 'app.css', 'font-awesome.min.css' );

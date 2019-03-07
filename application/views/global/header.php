@@ -1,9 +1,6 @@
 <v-toolbar clipped-left dark color="primary" id="app-toolbar">
     <v-avatar>
-    <img
-        src="public/images/ic_launcher.png"
-        alt="Vishal Rajput"
-      >
+    <img src="public/images/ic_launcher.png" alt="Vishal Rajput">
     </v-avatar>
     <v-toolbar-title class="text-uppercase hidden-sm-and-down title">Vishal Rajput</v-toolbar-title>
     <v-spacer></v-spacer>

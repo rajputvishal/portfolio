@@ -8,12 +8,9 @@
 
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,700|Google+Sans:400,500|Product+Sans:400&lang=" rel="stylesheet">
-        <link rel="stylesheet" href="public/css/font-awesome.min.css">
-        <link rel="stylesheet" href="public/css/app.css">
         <!-- Required Stylesheets -->
 
         <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet">
-        <link href="public/css/vuetify.min.css" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">        
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -35,29 +32,6 @@
             <?php if($footer) { echo $footer;}?>
         </div>
         <script src="https://unpkg.com/@babel/polyfill@latest/dist/polyfill.min.js"></script>
-        <script src="public/js/vue.js"></script>
-        <script src="public/js/vuetify.js"></script>
-        <script src="public/js/components.js"></script>
-
-        <script>
-            Vue.config.devtools = true;
-            window.app = new Vue({
-                el: '#app',
-                data: {
-                    posts: [{
-                        time: "fa-github",
-                        title: "https://github.com/rajputvishal",
-                        subtitle: "this is were it all begins",
-                        tags: ["techno", "javascript"],
-                        content:"hello hello hello hello hello"
-                    }]
-                },
-                computed: {
-                    showAlert() {
-                        return this.name.length > 4 ? true : false
-                    }
-                }
-            })
-        </script>
+        <?php echo $head; ?>
     </body>
 </html>

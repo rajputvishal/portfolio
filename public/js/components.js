@@ -29,6 +29,7 @@ Vue.component("blog-post", {
                     <h1  class="blog-title">{{post.title}}</h1>
                     <h2  class="blog-subtitle">{{post.subtitle}}</h2>
                     <blog-tags :tags="post.tags"></blog-tags>
+                    <blog-cover :cover="post.cover"></blog-cover>
                     <blog-content :content="post.content"></blog-content>
                 </div>`
 });
@@ -43,6 +44,11 @@ Vue.component("blog-tags", {
 Vue.component("blog-tag", {
     props: ["tag"],
     template: `<v-chip class="blog-tag">{{tag}}</v-chip>`
+});
+
+Vue.component("blog-cover", {
+    props: ["cover"],
+    template: `<v-img class="blog-cover" :src="'public/images/cover/'+cover+'.png'" height="290" width="590"></v-img>`
 });
 
 Vue.component("blog-content", {

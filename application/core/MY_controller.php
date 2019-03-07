@@ -7,8 +7,11 @@ class MY_Controller extends CI_Controller {
         parent::__construct();
     }
 
+    public function setHeader(){
+        $this->data['head'] = put_headers();
+    }
+    
     public function layout(){
-        $this->load->helper('url');
         $this->data['header'] = $this->load->view('global/header', $this->data, TRUE);
         $this->data['footer'] = $this->load->view('global/footer', $this->data, TRUE);
         $this->data['page'] = $this->load->view($this->page, $this->data, TRUE);

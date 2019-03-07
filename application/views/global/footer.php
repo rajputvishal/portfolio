@@ -1,7 +1,7 @@
 <div id="footer" class="primary">
   <v-layout class="subscribe" justify-center row align-center justify-center wrap> 
     <v-flex xs6>
-      <v-text-field solo append-icon="email" box background-color="white" color="white" label="Email address" type="email"></v-text-field>
+      <v-text-field label="Email" append-icon="email" type="email" color="white"></v-text-field>
       <div class="text-xs-center">
         <v-btn round color="secondary">Subscribe</v-btn>
       </div>

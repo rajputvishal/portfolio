@@ -20,7 +20,17 @@ class Welcome extends MY_Controller {
 	 */
 	public function index()
 	{
-		$this->page = "hello_world";
+		$query = $this->db->get("posts"); 
+		$blogPosts = [];
+		foreach ($query->result() as $post) {
+			$fileContent = file_get_contents("application/data/".$post->file.".json");
+			$blogPosts[] = json_encode($fileContent);			
+		  }
+		$this->page = "home";
+		$this->data['posts'] = $blogPosts;
+		
+		add_js(array("home/home.index.js"));
+		$this->setHeader();
 		$this->layout();		
 	}
 

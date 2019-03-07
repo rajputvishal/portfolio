@@ -1,0 +1,58 @@
+{
+    "title": "How to add Disqus to your github page",
+    "subtitle": "How you can add discuss comment to your free github page",
+    "tags":["javascript", "disqus", "github"],
+    "time": "7th March 19",
+    "cover": "Disqus_Demo_Page",
+    "elements": [{
+        "type": "img",
+        "altText": "Disqus logo",
+        "class": "logo",
+        "href": "../images/disqus_logo.png"
+    },
+    {
+        "type": "p",
+        "text": "This took me a little bit of grief so hopefully this will save you some trouble.",
+        "class": ""
+    },
+    {
+        "type": "p",
+        "text": "Your short name should look something like this, depending on how you've set up your blog: https-YOURUSERNAME-github-io-YOURUSERNAME-github-io . If you're typing in your Disqus 'USERNAME' in the _config.yml then you are doing the wrong thing. Your username is the thing you use to log into your disqus account.",
+        "class": ""
+    },{
+        "type": "p",
+        "text": "Here's what worked for me.",
+        "class": ""
+    }, {
+        "type": "ol",
+        "class": "",
+        "list": [{
+            "type": "p",
+            "text": "You need a Disqus account. If you don't have one please create one. This is much like creating a gmail or hotmail account.",
+            "class": ""       
+        },
+        {
+            "type": "p",
+            "text": "Log into Disqus using the username and password you just created. Go to the disqus home page and click admin. Click on 'install Disqus' and follow those instructions. You will notice many options where you can easily install disqus but there is no built in support for Github yet, So we will have to go and select 'install with universal code'.You'll need to select Jekyll etc. Add in your website name and complete set up. In my case it was: https://bkspurgeon.github.io/BKSpurgeon.github.io/",
+            "class": ""       
+        },
+        {
+            "type": "p",
+            "text": "On the universal code page you will get a javascript code from that code copy the <script> tag part and paste it just before </body> and paste <div id='disqus_thread'></div> anywhere you would like the disqus comment box to appear",
+            "class": ""       
+        },
+        {
+            "type": "p",
+            "text": "Now we are almost done just go to the script tag block and replace 'PAGE_URL' with your website URL and PAGE_IDENTIFIER with anything which can uniquely identify your page (I pasted my complete URL of that page).",
+            "class": ""       
+        },{
+            "type":"p",
+            "text":"Voila! Refresh your page and you should see disqus comment box on your page.",
+            "class": ""
+        }]        
+    },{
+            "type": "p",
+            "text": "Let me know if you face any trouble while following the above instructions in the comments :)",
+            "class": "quote"        
+    }]
+}

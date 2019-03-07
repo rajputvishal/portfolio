@@ -22,6 +22,11 @@ html {
     margin-bottom: 3rem;
 }
 
+#app-toolbar:hover {
+    background: linear-gradient(150deg,#f96c8d,#f74770);
+    transition: width 0.15s ease-in 0s;
+}
+
 @media (min-width: 760px) {
     .Content {
       max-width: 48rem;
@@ -83,6 +88,10 @@ html {
     margin: 0 auto;
     max-width: 35rem;
     color: #222;
+}
+
+.Blog-post .Blog-cover {
+    margin: 30 auto;
 }
 
 #footer .subscribe{
