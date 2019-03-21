@@ -5,8 +5,7 @@ window.app = new Vue({
         posts: []
     },
     beforeCreate: function () {
-        var _this = this;
-        
+        var _this = this;        
         axios
             .get("/api/articles")
             .then(
@@ -14,9 +13,16 @@ window.app = new Vue({
                     this.app.posts = response.data;                                
                 })
     },
+    onMount: function(){
+
+    },
     computed: {
-        showAlert() {
-            return this.name.length > 4 ? true : false
+        postPreviews: function () {                        
+            this.posts.forEach(element => {
+                element.content = [element.content.shift()];                
+            });
+            console.log(this.posts);
+            return this.posts;
         }
     }
 })

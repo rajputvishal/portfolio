@@ -4,12 +4,8 @@
     "tags":["javascript", "disqus", "github"],
     "time": "7th March 19",
     "cover": "Disqus_Demo_Page",
-    "elements": [{
-        "type": "img",
-        "altText": "Disqus logo",
-        "class": "logo",
-        "href": "../images/disqus_logo.png"
-    },
+    "id": "github_disqus",
+    "content": [
     {
         "type": "p",
         "text": "This took me a little bit of grief so hopefully this will save you some trouble.",

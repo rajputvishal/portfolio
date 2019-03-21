@@ -1,3 +1,3 @@
 <?php ob_start();?>
-<blog-post-list :posts="posts"></blog-post-list>
+<blog-post-list :posts="postPreviews"></blog-post-list>
 

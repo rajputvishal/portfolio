@@ -31,6 +31,7 @@ Vue.component("blog-post", {
                     <blog-tags :tags="post.tags"></blog-tags>
                     <blog-cover :cover="post.cover"></blog-cover>
                     <blog-content :content="post.content"></blog-content>
+                    <blog-readmore :href="'/blog/'+post.id" v-if="preview"></blog-readmore>
                 </div>`
 });
 
@@ -51,7 +52,45 @@ Vue.component("blog-cover", {
     template: `<v-img class="blog-cover" :src="'public/images/cover/'+cover+'.png'" height="290" width="590"></v-img>`
 });
 
+Vue.component("my-para", {
+    props: ['text'],
+    template: "<p>{{text}}</p>"
+})
+
+Vue.component("my-video", {
+    props: ['html'],
+    template: "<div v-html='html'></div>"
+})
+
+Vue.component("my-ul", {
+    props: ['list'],
+    template: "<ul><li v-for='item in list'>{{item.text}}</li></ul>"
+})
+
+Vue.component("my-ol", {
+    props: ['list'],
+    template: "<ol><li v-for='item in list'>{{item.text}}</li></ol>"
+})
+
+Vue.component("my-img", {
+    props: ['alt', 'href', 'imgclass'],
+    template: '<img :src="href" :class="imgclass" :alt="alt"></img>'
+})
+
+Vue.component("blog-readmore", {
+    props: ['href'],
+    template: `<a class="Blog-readMore" :href="href" title="Read more">Continue reading...</a>`
+})
+
 Vue.component("blog-content", {
     props: ["content"],
-    template: `<div class="blog-content" color="primary" text-color="white">{{content}}</div>`
+    template: `<div class="blog-content" color="primary" text-color="white">
+                    <template v-for="item in content">
+                        <my-para v-if="item.type == 'p'" :text="item.text" :class="item.class"></my-para>                        
+                        <my-img v-else-if="item.type == 'img'" :alt="item.altText" :imgclass="item.class" :href="item.href"></my-img>
+                        <my-video v-else-if="item.type == 'video'"  :html="item.html"></my-video>
+                        <my-ul v-else-if="item.type == 'ul'" :list="item.list" :class="item.class" :text="item.text"></my-ul>
+                        <my-ol v-else-if="item.type == 'ol'" :list="item.list" :class="item.class" :text="item.text"></my-ol>                        
+                    </template>
+                </div>`
 });

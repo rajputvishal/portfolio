@@ -90,6 +90,11 @@ html {
     color: #222;
 }
 
+.Blog-readMore {
+    text-align: center;
+    color: #f96c8d;
+    display: block;
+}
 .Blog-post .Blog-cover {
     margin: 30 auto;
 }
